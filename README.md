@@ -5,7 +5,7 @@ Tasukete is loosly translated to"help".
 This NPM Package is my first attempt to use NPM as a way to store my generalized code. Feel free to use and improve it. 
 
 
-
+<br/>
 
 ## Installation
 To install this package, in your command line, simply type:
@@ -15,7 +15,7 @@ This will install the package to your current project, under "dependencies".
 
 
 
-
+<br/>
 
 ## How to use
 To use this package in your SCSS project, simply import the package in your SCSS files:
@@ -49,7 +49,7 @@ Now, you should be able to use my package and its awesome contents in your own p
 
 
 
-
+<br/>
 
 ## I don't like your variables, how to override?
 If you want to override my already awesome variables, with your own, presumably more awesome values, you can do it like this:
@@ -67,6 +67,7 @@ The way SCSS works is, when the variables has been initialized with a value, you
 
 This way, you can override my variables, with your own. **You need to call your variables the same as mine for it to work though.**
 
+<br/>
 
 ## How can I help?
 If you want to help me develop this small library, you're welcome to fork my repo and make pull requests. Then I will check it out, and if you're lucky, the change will get added to the package a later date (≧▽≦)
@@ -76,16 +77,18 @@ You're also welcome to shoot me a mention on twitter if you've used my package. 
 
 
 
-
+<br/>
 
 ## There are problems with your package - plzz fix!
 If you notice bugs or issues with my package, you are more than welcome to shoot me a message and/or open an issue on the repository. I want it to be as bug-free as possible. Well, as bug-free a SCSS project can be.
 
+<br/>
 
 ## License
 
 
 
+<br/>
 
 # Thanks
 Thank you for your interest in this package. Even if you've just checked it out, it's greatly appriciated.
