@@ -85,7 +85,7 @@ If you notice bugs or issues with my package, you are more than welcome to shoot
 <br/>
 
 ## License
-
+This project is licensed under the **MIT** license. Open the LICENSE file to read more about, what that means for you.
 
 
 <br/>
