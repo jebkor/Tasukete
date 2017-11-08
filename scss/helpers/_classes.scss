@@ -1,0 +1,37 @@
+@if $vue-enabled == true {
+    [v-cloak] {
+        display: none !important;
+    }
+}
+
+%absolute-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%absolute-horizontal {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+}
+
+%transition {
+    transition: all 2s
+        cubic-bezier(
+            size(transition, first),
+            size(transition, second),
+            size(transition, third),
+            size(transition, fourth)
+        );
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
