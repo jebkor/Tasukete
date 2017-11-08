@@ -4,16 +4,29 @@
     "description":
         "A collection of SASS (SCSS) function and mixins to make your SASS development faster",
     "main": "",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "repository": {
         "type": "git",
-        "url": "something"
+        "url": "git+https://github.com/jebkor/Tasukete.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jebkor/Tasukete/issues",
+        "email": "jesper@jebkor.dk"
     },
     "keywords": ["SASS", "SCSS", "Mixins", "Functions"],
-    "author": "jebkor_",
-    "license": "ISC",
+    "author": {
+        "name": "jebkor_",
+        "email": "jesper@jebkor.dk",
+        "url": "https://jebkor.dk"
+    },
+    "eyeglass": {
+        "name": "tasukete",
+        "scssDir": "scss",
+        "exports": false
+    },
+    "license": "MIT",
+    "scripts": {
+        "sass": "gulp sass"
+    },
     "dependencies": {
         "browser-sync": "^2.18.13",
         "gulp": "^3.9.1",
