@@ -1,0 +1,16 @@
+$transparent: rgba(255, 255, 255, 0);
+
+@mixin triangle-base {
+    @include square(0);
+}
+
+@import "triangle-top";
+@import "triangle-bottom";
+@import "triangle-left";
+@import "triangle-right";
+
+@import "triangle-top-left";
+@import "triangle-top-right";
+
+@import "triangle-bottom-left";
+@import "triangle-bottom-right";
