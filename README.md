@@ -4,6 +4,8 @@ Tasukete is loosly translated to"help".
 
 This NPM Package is my first attempt to use NPM as a way to store my generalized code. Feel free to use and improve it. 
 
+It mainly (for now) contains some mixins, functions and some classes that makes sense to be generalized.
+
 
 <br/>
 

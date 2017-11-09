@@ -53,3 +53,23 @@
     -o-animation: #{$str};
     animation: #{$str};
 }
+
+// enter the font-size, the line-height and the number of lines to show before adding ellipsis
+@mixin ellipsis($font-size, $line-height, $lines-toshow) {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    width: 400px;
+    height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+    margin: 0 auto;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
