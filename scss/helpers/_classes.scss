@@ -1,9 +1,3 @@
-@if $vue-enabled == true {
-    [v-cloak] {
-        display: none !important;
-    }
-}
-
 %absolute-vertical {
     position: absolute;
     top: 50%;
