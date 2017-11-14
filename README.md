@@ -48,8 +48,7 @@ gulp.task("sass", function() {
 ```
 Now, you should be able to use my package and its awesome contents in your own project.
 
-
-
+Documentation for mixins and functions are currently being worked on. For now, you have to dive into the package to find out, which mixins and functions are usable.
 
 <br/>
 
