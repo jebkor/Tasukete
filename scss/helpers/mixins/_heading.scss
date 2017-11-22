@@ -1,0 +1,30 @@
+@mixin heading {
+    font-family: inherit;
+    margin-bottom: 0.35em;
+    line-height: 1.2;
+    color: inherit;
+}
+
+@mixin heading-1 {
+    font-size: 3.375em;
+}
+
+@mixin heading-2 {
+    font-size: 2.966em;
+}
+
+@mixin heading-3 {
+    font-size: 1.5em;
+}
+
+@mixin heading-4 {
+    font-size: 1.318em;
+}
+
+@mixin heading-5 {
+    font-size: 1em;
+}
+
+@mixin heading-6 {
+    font-size: 0.875em;
+}
