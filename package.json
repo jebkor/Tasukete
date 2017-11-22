@@ -1,8 +1,7 @@
 {
     "name": "tasukete",
     "version": "1.0.3",
-    "description":
-        "A collection of SASS (SCSS) function and mixins to make your SASS development faster",
+    "description": "A collection of SASS (SCSS) function and mixins to make your SASS development faster",
     "main": "",
     "repository": {
         "type": "git",
@@ -12,7 +11,12 @@
         "url": "https://github.com/jebkor/Tasukete/issues",
         "email": "jesper@jebkor.dk"
     },
-    "keywords": ["SASS", "SCSS", "Mixins", "Functions"],
+    "keywords": [
+        "SASS",
+        "SCSS",
+        "Mixins",
+        "Functions"
+    ],
     "author": {
         "name": "jebkor_",
         "email": "jesper@jebkor.dk",
@@ -27,12 +31,13 @@
     "scripts": {
         "sass": "gulp sass"
     },
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
         "browser-sync": "^2.18.13",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^4.0.0",
         "gulp-clean": "^0.3.2",
         "gulp-sass": "^3.1.0",
-        "node-sass": "^4.6.0"
+        "node-sass": "^4.7.2"
     }
 }
