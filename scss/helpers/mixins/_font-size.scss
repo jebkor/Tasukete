@@ -1,4 +1,4 @@
 @mixin font-size($size) {
     font-size: $size;
-    font-size: calcRem($size);
+    font-size: calc-rem($size);
 }
