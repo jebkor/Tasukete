@@ -16,7 +16,7 @@
         @media (min-width: 1200px) {
             @content;
         }
-    } @else if  $class == uber {
+    } @else if $class == uber {
         @media (min-width: 1440px) {
             @content;
         }
