@@ -1,5 +1,5 @@
 // function for getting colors from both complex and non-complex variable-maps
-@function color($color-name, $color-variant: null) {
+@function myColor($color-name, $color-variant: null) {
     // color variant is optional
     @if ($color-variant != null) {
         @return map-get(map-get($myColors, $color-name), $color-variant);
@@ -9,7 +9,7 @@
 }
 
 // function for getting sizes from both complex and non-complex variable-maps
-@function size($size-name, $size-variant: null) {
+@function mySize($size-name, $size-variant: null) {
     // color variant is optional
     @if ($size-variant != null) {
         @return map-get(map-get($mySizes, $size-name), $size-variant);

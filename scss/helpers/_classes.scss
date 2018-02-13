@@ -15,10 +15,10 @@
 %transition {
     transition: all 2s
         cubic-bezier(
-            size(transition, first),
-            size(transition, second),
-            size(transition, third),
-            size(transition, fourth)
+            mySize(transition, first),
+            mySize(transition, second),
+            mySize(transition, third),
+            mySize(transition, fourth)
         );
 }
 
