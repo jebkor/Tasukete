@@ -17,7 +17,7 @@
 // Used for giving an element a nice transitioning effect. 
 // Check the '_variables.scss' for more info on setting your own variables.
 %transition {
-    transition: all 2s cubic-bezier(getSize($tasuketeSizes, transition, first, true), getSize($tasuketeSizes, transition, second, true), getSize($tasuketeSizes, transition, third, true), getSize($tasuketeSizes, transition, fourth, true));
+    transition: all 0.2s cubic-bezier(getSize($tasuketeSizes, transition, first, true), getSize($tasuketeSizes, transition, second, true), getSize($tasuketeSizes, transition, third, true), getSize($tasuketeSizes, transition, fourth, true));
 }
 
 // Visually hide  the element completly. 
