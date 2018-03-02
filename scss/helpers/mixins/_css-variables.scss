@@ -1,0 +1,12 @@
+// used for local variables
+// $name =  name your own css variable name, i.e. color-primary
+// $value = the value you want to assign to your css variable
+/*
+h1 {
+    $localColorVar: map-get($myColors, primary);
+    @include var(color-primary, $localPrimaryColor);
+    color: 
+*/
+@mixin var($name, $value) {
+    #{--$name}: $value;
+}

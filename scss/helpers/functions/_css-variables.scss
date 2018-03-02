@@ -1,3 +1,5 @@
-@function getColor($color-name) {
-    @return var(--color-#{$color-name});
+// used for getting the css-variable of choice, if you know what it is.
+// Can be used in both local and global scope.
+@function v($name) {
+    @return var(--#{$name});
 }

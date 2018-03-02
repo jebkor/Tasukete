@@ -1,3 +1,5 @@
+// A mixin for setting the font-size in REM
+// with a fallback for older browsers
 @mixin font-size($size) {
     font-size: $size;
     font-size: calc-rem($size);

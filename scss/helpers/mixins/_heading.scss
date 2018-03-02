@@ -1,3 +1,4 @@
+// Mixin for setting the basic styles for a heading class
 @mixin heading {
     font-family: inherit;
     margin-bottom: 0.35em;
@@ -5,26 +6,27 @@
     color: inherit;
 }
 
+// Mixin for setting the
 @mixin heading-1 {
-    font-size: 3.375em;
+    @include font-size(getSize($tasuketeFonts, heading, heading1, true));
 }
 
 @mixin heading-2 {
-    font-size: 2.966em;
+    @include font-size(getSize($tasuketeFonts, heading, heading2, true));
 }
 
 @mixin heading-3 {
-    font-size: 1.5em;
+    @include font-size(getSize($tasuketeFonts, heading, heading3, true));
 }
 
 @mixin heading-4 {
-    font-size: 1.318em;
+    @include font-size(getSize($tasuketeFonts, heading, heading4, true));
 }
 
 @mixin heading-5 {
-    font-size: 1em;
+    @include font-size(getSize($tasuketeFonts, heading, heading5, true));
 }
 
 @mixin heading-6 {
-    font-size: 0.875em;
+    @include font-size(getSize($tasuketeFonts, heading, heading6, true));
 }

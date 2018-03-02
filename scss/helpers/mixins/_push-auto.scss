@@ -1,9 +1,7 @@
-/*
-    Used for centering a block without worrying about top and bottom margin
-*/
+// Used for centering a block without worrying about top and bottom margin
 @mixin push-auto {
-    margin: { 
+    margin: {
         left: auto;
         right: auto;
-    }
+    };
 }

@@ -1,26 +1,33 @@
-// breakpoints for bootstrap
+// breakpoints for bootstrap viewport sizes
+// To override these values, see the instructions on the docs page
+// or in the '_variables.scss' file
 @mixin bp($class) {
     @if $class == phone {
-        @media (max-width: 768px) {
+        @media (max-width: getSize($tasuketeSizes, bootstrap, xs-sm, true)) {
             @content;
         }
-    } @else if $class == tablet {
-        @media (min-width: 768px) {
+    }
+    @else if $class == tablet {
+        @media (min-width: getSize($tasuketeSizes, bootstrap, xs-sm, true)) {
             @content;
         }
-    } @else if $class == laptop {
-        @media (min-width: 992px) {
+    }
+    @else if $class == laptop {
+        @media (min-width: getSize($tasuketeSizes, bootstrap, md, true)) {
             @content;
         }
-    } @else if $class == desktop {
-        @media (min-width: 1200px) {
+    }
+    @else if $class == desktop {
+        @media (min-width: getSize($tasuketeSizes, bootstrap, lg, true)) {
             @content;
         }
-    } @else if $class == uber {
-        @media (min-width: 1440px) {
+    }
+    @else if $class == uber {
+        @media (min-width: getSize($tasuketeSizes, bootstrap, xl, true)) {
             @content;
         }
-    } @else {
+    }
+    @else {
         // prettier-ignore
         @warn "Breakpoint mixin supports: phone(xs), tablet(sm), laptop(md), desktop(lg), uber ";
     }

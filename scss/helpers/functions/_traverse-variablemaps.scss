@@ -1,19 +1,82 @@
 // function for getting colors from both complex and non-complex variable-maps
-@function myColor($color-name, $color-variant: null) {
+@function myColor($variableName, $color-name, $color-variant: null) {
+    @error "The myColor() function is deprecated. Switch to getColor() instead.";
+
     // color variant is optional
-    @if ($color-variant != null) {
-        @return map-get(map-get($myColors, $color-name), $color-variant);
-    } @else {
-        @return map-get($myColors, $color-name);
+    @if $color-variant != null {
+        @return map-get(map-get($variableName, $color-name), $color-variant);
     }
-}
+    @else {
+        @return map-get($variableName, $color-name);
+    }
+} // myColor()
 
 // function for getting sizes from both complex and non-complex variable-maps
-@function mySize($size-name, $size-variant: null) {
+@function mySize($variableName, $size-name, $size-variant: null) {
+    @error "The mySize() function is deprecated. Switch to use getSize() instead.";
+
     // color variant is optional
-    @if ($size-variant != null) {
-        @return map-get(map-get($mySizes, $size-name), $size-variant);
-    } @else {
-        @return map-get($mySizes, $size-name);
+    @if $size-variant != null {
+        @return map-get(map-get($variableName, $size-name), $size-variant);
     }
-}
+    @else {
+        @return map-get($variableName, $size-name);
+    }
+} // mySize()
+
+// retrieve colors from map with Sass ie. `color(viewport, sm)`
+@function getColor($variableToUse, $color-name, $color-variant: null, $true-val: false) {
+    // if we are returning the true color value
+    @if $true-val == true {
+        // color variant is optional
+        @if $color-variant != null {
+            // map inception, need two deep
+            @return map-get(map-get($variableToUse, $color-name), $color-variant);
+        }
+        @else {
+            // single-level color, one deep
+            @return map-get($variableToUse, $color-name);
+        }
+
+        // if we’re only returning the CSS4 variable
+    }
+    @else {
+        // color variant is optional
+        @if $color-variant != null {
+            // map inception, need two names
+            @return var(--color-#{$color-name}-#{$color-variant});
+        }
+        @else {
+            // single-level color, one name
+            @return var(--color-#{$color-name});
+        }
+    }
+} // getColor
+
+@function getSize($variableToUse, $size-name, $size-variant: null, $true-val: false) {
+    // if we are returning the true color value
+    @if $true-val == true {
+        // color variant is optional
+        @if $size-variant != null {
+            // map inception, need two deep
+            @return map-get(map-get($variableToUse, $size-name), $size-variant);
+        }
+        @else {
+            // single-level color, one deep
+            @return map-get($variableToUse, $size-name);
+        }
+
+        // if we’re only returning the CSS4 variable
+    }
+    @else {
+        // color variant is optional
+        @if $size-variant != null {
+            // map inception, need two names
+            @return var(--size-#{$size-name}-#{$size-variant});
+        }
+        @else {
+            // single-level color, one name
+            @return var(--size-#{$size-name});
+        }
+    }
+} // getSize

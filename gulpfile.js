@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const ap = require("gulp-autoprefixer");
-const bs = require("browser-sync").create();
 const clean = require("gulp-clean");
 
 const scssUrl = {
@@ -21,8 +20,7 @@ gulp.task("sass", function() {
             }).on("error", sass.logError)
         )
         .pipe(ap({ browsers: ["last 2 versions", "ie >= 9"] }))
-        .pipe(gulp.dest(scssUrl.scssOutput))
-        .pipe(bs.reload({ stream: true }));
+        .pipe(gulp.dest(scssUrl.scssOutput));
 });
 
 // used for deleting the old, "cached" version of the output css

@@ -1,9 +1,11 @@
+// Used for positioning the element, vertically centered.
 %absolute-vertical {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
+// Used for positioning the element, horizontally centered.
 %absolute-horizontal {
     left: 0;
     margin-left: auto;
@@ -12,17 +14,14 @@
     right: 0;
 }
 
+// Used for giving an element a nice transitioning effect. 
+// Check the '_variables.scss' for more info on setting your own variables.
 %transition {
-    transition: all 2s
-        cubic-bezier(
-            mySize(transition, first),
-            mySize(transition, second),
-            mySize(transition, third),
-            mySize(transition, fourth)
-        );
+    transition: all 2s cubic-bezier(getSize($tasuketeSizes, transition, first, true), getSize($tasuketeSizes, transition, second, true), getSize($tasuketeSizes, transition, third, true), getSize($tasuketeSizes, transition, fourth, true));
 }
 
-
+// Visually hide  the element completly. 
+// It should remain in the same order in the DOM
 %visuallyhidden {
     margin: -1px;
     padding: 0;
@@ -30,10 +29,12 @@
     height: 1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
-    clip: rext(0,0,0,0);
+    clip: rext(0, 0, 0, 0);
     position: absolute;
 }
 
+// A nice clearfix class, to gice to any element
+// which has floating children
 .clearfix::after {
     clear: both;
     content: ".";
@@ -42,25 +43,18 @@
     visibility: hidden;
 }
 
+// Removes all margin
 .margin-0 {
     margin: 0 !important;
 }
 
+// Removes all padding
 .padding-0 {
     padding: 0 !important;
 }
 
 // You forgot to add alt text to an image~~
+// Great for being aware of accessibility
 img:not([alt]) {
     border: 5px solid #c00;
-
-
 }
-
-
-body {
-    font-family: "Roboto";
-}
-
-
-h1 { @include heading-3; }
