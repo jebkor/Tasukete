@@ -32,3 +32,35 @@
         @warn "Breakpoint mixin supports: phone(xs), tablet(sm), laptop(md), desktop(lg), uber ";
     }
 }
+
+@mixin ubp($class, $variableToUse, $size-name, $size-variant: null) {
+    @if $class == phone {
+        @media (max-width: getSize($variableToUse, $size-name, $size-variant, true)) {
+            @content;
+        }
+    }
+    @else if $class == tablet {
+        @media (min-width: getSize($variableToUse, $size-name, $size-variant, true)) {
+            @content;
+        }
+    }
+    @else if $class == laptop {
+        @media (min-width: getSize($variableToUse, $size-name, $size-variant, true)) {
+            @content;
+        }
+    }
+    @else if $class == desktop {
+        @media (min-width: getSize($variableToUse, $size-name, $size-variant, true)) {
+            @content;
+        }
+    }
+    @else if $class == uber {
+        @media (min-width: getSize($variableToUse, $size-name, $size-variant, true)) {
+            @content;
+        }
+    }
+    @else {
+        // prettier-ignore
+        @warn "Breakpoint mixin supports: phone(xs), tablet(sm), laptop(md), desktop(lg), uber ";
+    }
+}
