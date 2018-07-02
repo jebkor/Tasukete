@@ -1,0 +1,10 @@
+
+// use to make an image grayscale, i.e. when not hovered
+@mixin black-and-white() {
+    filter: grayscale(100%);
+}
+
+// use to make an image colored, i.e. on hover
+@mixin color() {
+    filter: grayscale(0%);
+}
