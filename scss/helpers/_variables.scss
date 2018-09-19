@@ -1,5 +1,28 @@
 // Pro-tip: To override any of these variables, make your own '_override.scss' file
 // which is loaded before this one. Name the variables the same, but give it different
 // values instead. When SASS variables are set once, they can't get overridden.
-$tasuketeSizes: (transition: (first: 0.55, second: 0, third: 0.1, fourth: 1), bootstrap: (xs-sm: 768px, md: 992px, lg: 1200px, xl: 1440px, xxl: 1920px));
-$tasuketeFonts: (heading: (heading1: 54px, heading2: 47px, heading3: 24px, heading4: 20px, heading5: 16px, heading6: 14px));
+$tasuketeSizes: (
+  transition: (
+    first: 0.55, 
+    second: 0, 
+    third: 0.1, 
+    fourth: 1
+  ), 
+  bootstrap: (
+    xs-sm: 768px, 
+    md: 992px, 
+    lg: 1200px, 
+    xl: 1440px, 
+    xxl: 1920px
+  )
+);
+$tasuketeFonts: (
+  heading: (
+    heading1: 54px, 
+    heading2: 47px, 
+    heading3: 24px, 
+    heading4: 20px, 
+    heading5: 16px, 
+    heading6: 14px
+  )
+);

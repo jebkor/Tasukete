@@ -1,6 +1,6 @@
 {
     "name": "tasukete",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "A collection of SASS (SCSS) function and mixins to make your SASS development faster",
     "main": "",
     "repository": {
@@ -35,9 +35,9 @@
     "devDependencies": {
         "browser-sync": "^2.18.13",
         "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^4.1.0",
-        "gulp-clean": "^0.3.2",
-        "gulp-sass": "^3.1.0",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-clean": "^0.4.0",
+        "gulp-sass": "^4.0.1",
         "node-sass": "^4.7.2"
     }
 }

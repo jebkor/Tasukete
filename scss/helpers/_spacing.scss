@@ -1,0 +1,102 @@
+$spacer: 16px;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  ),
+  2: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+);
+
+// margin helper classes - inspired by Vuetify
+@each $level, $spacer in $spacers {
+  .ma-#{$level} {
+    margin: map-get($spacer, y) map-get($spacer, x);
+  }
+  .my-#{$level} {
+    margin-top: map-get($spacer, y);
+    margin-bottom: map-get($spacer, y);
+  }
+  .mx-#{$level} {
+    margin-right: map-get($spacer, x);
+    margin-left: map-get($spacer, x);
+  }
+  .mt-#{$level} {
+    margin-top: map-get($spacer, y);
+  }
+  .mr-#{$level} {
+    margin-right: map-get($spacer, x);
+  }
+  .mb-#{$level} {
+    margin-bottom: map-get($spacer, y);
+  }
+  .mr-#{$level} {
+    margin-left: map-get($spacer, x);
+  }
+}
+
+@each $level, $spacer in $spacers {
+  .pa-#{$level} {
+    padding: map-get($spacer, y) map-get($spacer, x);
+  }
+  .py-#{$level} {
+    padding-top: map-get($spacer, y);
+    padding-bottom: map-get($spacer, y);
+  }
+  .px-#{$level} {
+    padding-right: map-get($spacer, x);
+    padding-left: map-get($spacer, x);
+  }
+  .pt-#{$level} {
+    padding-top: map-get($spacer, y);
+  }
+  .pr-#{$level} {
+    padding-right: map-get($spacer, x);
+  }
+  .pb-#{$level} {
+    padding-bottom: map-get($spacer, y);
+  }
+  .pr-#{$level} {
+    padding-left: map-get($spacer, x);
+  }
+}
+// }
+//   .ma-{$i}
+//     margin: $spacer.y $spacer.x !important
+//   .my-{$i}
+//     margin-top: $spacer.y !important
+//     margin-bottom: $spacer.y !important
+//   .mx-{$i}
+//     margin-left: $spacer.x !important
+//     margin-right: $spacer.x !important
+//   .mt-{$i}
+//     margin-top: $spacer.y !important
+//   .mr-{$i}
+//     margin-right: $spacer.x !important
+//   .mb-{$i}
+//     margin-bottom: $spacer.y !important
+//   .ml-{$i}
+//     margin-left: $spacer.x !important
+
+
