@@ -1,0 +1,11 @@
+/*
+* This mixin/class combo was taken and rewritten from the awesome vuejs
+* framework, Vuetify.
+*/
+
+// run 25 times, minus 1 to generate an .elevation-0 class
+@for $z from 1 through 25 {
+  .elevation-#{$z - 1} {
+    @include elevation($z, true);
+  }
+}

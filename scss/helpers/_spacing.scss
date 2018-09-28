@@ -29,6 +29,41 @@ $spacers: (
   )
 );
 
+.ma-auto {
+  margin-top: auto !important;
+  margin-right: auto !important;
+  margin-bottom: auto !important;
+  margin-left: auto !important;
+
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+
 // margin helper classes - inspired by Vuetify
 @each $level, $spacer in $spacers {
   .ma-#{$level} {
@@ -54,9 +89,7 @@ $spacers: (
   .mr-#{$level} {
     margin-left: map-get($spacer, x);
   }
-}
 
-@each $level, $spacer in $spacers {
   .pa-#{$level} {
     padding: map-get($spacer, y) map-get($spacer, x);
   }
@@ -81,22 +114,3 @@ $spacers: (
     padding-left: map-get($spacer, x);
   }
 }
-// }
-//   .ma-{$i}
-//     margin: $spacer.y $spacer.x !important
-//   .my-{$i}
-//     margin-top: $spacer.y !important
-//     margin-bottom: $spacer.y !important
-//   .mx-{$i}
-//     margin-left: $spacer.x !important
-//     margin-right: $spacer.x !important
-//   .mt-{$i}
-//     margin-top: $spacer.y !important
-//   .mr-{$i}
-//     margin-right: $spacer.x !important
-//   .mb-{$i}
-//     margin-bottom: $spacer.y !important
-//   .ml-{$i}
-//     margin-left: $spacer.x !important
-
-
