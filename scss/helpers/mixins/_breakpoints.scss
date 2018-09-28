@@ -28,9 +28,10 @@
         }
     }
     @else {
-        // prettier-ignore
-        @warn "Breakpoint mixin supports: phone(xs), tablet(sm), laptop(md), desktop(lg), uber ";
+        @error "Breakpoint mixin supports: phone(xs), tablet(sm), laptop(md), desktop(lg), uber ";
     }
+
+    @warn "This mixin will become deprecated in a future release. Please use the mixin 'screen' instead. It's much simpler";
 }
 
 @mixin ubp($class, $variableToUse, $size-name, $size-variant: null) {
@@ -60,7 +61,22 @@
         }
     }
     @else {
-        // prettier-ignore
-        @warn "Breakpoint mixin supports: phone(xs), tablet(sm), laptop(md), desktop(lg), uber ";
+      @error "Breakpoint mixin supports: phone(xs), tablet(sm), laptop(md), desktop(lg), uber ";
+  }
+
+  @warn "This mixin will become deprecated in a future release. Please use the mixin 'screen' instead. It's much simpler";
+}
+
+// $size: the size of the viewport as a string. 'xsmall', 'small', 'medium', 'large', 'xlarge'
+// $varToUse: The variable you want to use
+// $sizeName: If the variable is a SassMap, input the child variable here.
+@mixin screen($varToUse, $max: min) {
+  @if $varToUse {
+    @media screen and (#{$max}-width: $varToUse) {
+        @content;
     }
+  }
+  @else {
+    @error "No variables set";
+  }
 }
